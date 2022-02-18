@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+	<head>
+		<title>BLOCWRK | An Urban and Lifestyle Brand | Coming Soon</title>
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="magnific-popup.css">
+	</head>
+	<body>
+		<div class="clearfix top">
+			<div class="row wrapper relative">
+				<div class="span6 boxsized social">
+					<a href="https://www.facebook.com/pages/Blocwrk/572762349504130"><img src="images/icon-fb.png" class="left" border="0"></a>
+					<a href="http://www.twitter.com/blocapparel"><img src="images/icon-tw.png" class="left" border="0"></a>
+					<a href="http://blocsblog.tumblr.com"><img src="images/icon-tu.png" class="left" border="0"></a>
+					<a href="http://instagram.com/blocwrk"><img src="images/icon-insta.png" class="left" border="0"></a>
+				</div>
+				<div class="span6 boxsized">
+					<a href="javascript:void(0);" class="cart">Cart (<span class="simpleCart_quantity">0</span>)</a>
+					<div id="cartPopover" class="span6">
+						<div id="cartData" class="clearfix">
+							<div class="left">
+								<strong>Items: </strong>
+								<span class="simpleCart_quantity"></span>
+							</div>
+							<div class="right">
+								<strong>Total: </strong>
+								<span class="simpleCart_total"></span>
+							</div>
+						</div>
+						<div class="simpleCart_items clearfix"></div>
+						<div id="popoverButtons" class="clearfix">
+							<a class="simpleCart_checkout hudbtn primary right" href="javascript:;">Checkout with PayPal</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="row clearfix">
+				<div class="span12 tc pt40 p40 ">
+					<img src="images/blocwrk-logo.png" class="center">
+				</div>
+			</div>
+			<div class="row">
+				<div class="span12 tc">
+					<p>BLOCWRK embodies various subcultures developed through art. At BLOCWRK we believe fashion and design are an expression of life. Social and political instances have inspired our team to create products reflecting upon our attitude and lifestyle. Based out of Southern Florida, 24/7, Rain or Shine, we got that work.   </p>
+					<p>
+						<small>BLOCWRK is trying to get off the ground right now and currently only offers one product available for purchase. We're proud to offer you the FLA Snapback. This hat was the inspiration behind the brand and we believe it embodies the true essence of BLOCWRK.</small>
+					</p>
+				</div>
+			</div>
+			<div class="row p30">&nbsp;</div>
+			<div class="row">
+				<div class="span6">
+					<img src="images/hat-main.png" class="right">
+				</div>
+				<div class="span6 simpleCart_shelfItem">
+					<h1>FLA Snapback</h1>
+					<span style="display:none;" class="item_name">BLOCWRK FLA Snapback Hat</span>
+					<h5 class="green item_price">$25.00</h5>
+					<ul>
+						<li><span>Six Panel Snapback</span></li>
+						<li><span>Acrylic/Wool blend</span></li>
+						<li><span>Direct Embroidred Logo</span></li>
+					</ul>
+					<a href="javascript:void(0);" class="add-to-cart item_add">
+						Add to Cart
+					</a>
+				</div>
+			</div>
+			<div class="row p30">&nbsp;</div>
+			<div class="row" id="thumbs">
+				<div class="span6">
+					<a href="images/hat-large-1.jpg" class="image-link right">
+						<img src="images/hat-thumb-1.jpg">
+					</a>
+					
+				</div>
+				<div class="span6">
+					<a href="images/hat-large-2.jpg" class="image-link left">
+						<img src="images/hat-thumb-2.jpg">
+					</a>
+				</div>
+			</div>
+			<div class="row p50">&nbsp;</div>
+		</div>
+		<footer id="footer">
+			<div class="wrapper clearfix">
+				<div class="row">
+					<div class="span6">
+						&copy; Copyright 2014 BLOCWRK. All rights reserved.
+					</div>
+					<div class="span6 social tr">
+						<span>FOLLOW US &nbsp;</span>
+						<a href="http://instagram.com/blocwrk"><img src="images/icon-insta.png" border="0"></a>
+						<a href="https://www.facebook.com/pages/Blocwrk/572762349504130"><img src="images/icon-tu.png" border="0"></a>
+						<a href="http://www.twitter.com/blocapparel"><img src="images/icon-tw.png" border="0"></a>
+						<a href="http://blocsblog.tumblr.com"><img src="images/icon-fb.png" border="0"></a>
+					</div>
+				</div>
+			</div>
+		</footer>	
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.0.js"></script>	
+		<script type="text/javascript" src="js/jquery.magnific.min.js"></script>
+		<script type="text/javascript" src="js/simpleCart.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.image-link').magnificPopup({
+					type:'image',
+					gallery:{
+				    	enabled:true
+					}
+				});
+				simpleCart({
+					checkout: {
+						type: "PayPal",
+						email: "georocabado@blocwrk.com"
+					}
+				});
+				simpleCart.bind( 'afterAdd' , function( item ){
+				    if(!$('#cartPopover').is(':visible')){
+						$('#cartPopover').fadeIn();
+					}
+				});
+
+				$('.cart').click(function(){
+					if(!$('#cartPopover').is(':visible')){
+						$('#cartPopover').fadeIn();
+					} else {
+						$('#cartPopover').fadeOut();
+					}
+					
+				});
+			});
+		</script>	
+	</body>
+</html>
